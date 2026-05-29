@@ -1,47 +1,95 @@
 // Xpeditions site — minimal JS
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile nav toggle
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
+    var toggle = document.querySelector('.nav-toggle');
+    var links = document.querySelector('.nav-links');
     if (toggle && links) {
         toggle.addEventListener('click', function() {
             links.classList.toggle('open');
         });
     }
-
-    // Close mobile menu when clicking a link
     document.querySelectorAll('.nav-links a').forEach(function(a) {
         a.addEventListener('click', function() {
             if (links) links.classList.remove('open');
         });
     });
 
-    // Simple contact form handler (since this is a static site,
-    // wire this up to your backend / mail script when deploying)
-    const forms = document.querySelectorAll('form.contact-form');
-    forms.forEach(function(form) {
+    // ============ Contact form (Web3Forms) ============
+    document.querySelectorAll('form.contact-form').forEach(function(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            const fd = new FormData(form);
-            const name = (fd.get('name') || '').toString().trim();
-            const email = (fd.get('email') || '').toString().trim();
+
+            var status = form.querySelector('.form-status');
+            var submitBtn = form.querySelector('button[type="submit"]');
+
+            // Basic validation
+            var name  = (form.elements['name'] && form.elements['name'].value || '').trim();
+            var email = (form.elements['email'] && form.elements['email'].value || '').trim();
             if (!name || !email) {
-                alert('Please enter your name and email.');
+                showStatus(status, 'Please enter your name and email.', 'error');
                 return;
             }
             if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-                alert('Please enter a valid email.');
+                showStatus(status, 'Please enter a valid email address.', 'error');
                 return;
             }
-            // Replace with your real submit endpoint (e.g. /mail.php or a serverless function).
-            alert('Thank you, ' + name + '! Your message has been received. We will get back to you soon.');
-            form.reset();
+
+            // Honeypot — if a bot filled the hidden checkbox, silently drop
+            if (form.elements['botcheck'] && form.elements['botcheck'].checked) {
+                return;
+            }
+
+            // Disable button + show "sending"
+            var originalText = submitBtn ? submitBtn.innerHTML : '';
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = 'Sending…';
+            }
+            showStatus(status, '', '');
+
+            // POST as JSON to Web3Forms
+            var data = {};
+            new FormData(form).forEach(function(v, k) { data[k] = v; });
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(function(res) { return res.json().then(function(json) { return { ok: res.ok, json: json }; }); })
+            .then(function(result) {
+                if (result.ok && result.json && result.json.success) {
+                    showStatus(status, 'Thanks ' + name + ' — your message has been sent. We will reply within one working day.', 'success');
+                    form.reset();
+                } else {
+                    var msg = (result.json && result.json.message) || 'Something went wrong. Please email mail@xpeditions.in directly.';
+                    showStatus(status, msg, 'error');
+                }
+            })
+            .catch(function() {
+                showStatus(status, 'Could not send right now. Please email mail@xpeditions.in directly.', 'error');
+            })
+            .finally(function() {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                }
+            });
         });
     });
 
+    function showStatus(el, text, kind) {
+        if (!el) return;
+        el.textContent = text;
+        el.className = 'form-status' + (kind ? ' is-' + kind : '');
+    }
+
     // Reveal-on-scroll for cards
     if ('IntersectionObserver' in window) {
-        const obs = new IntersectionObserver(function(entries) {
+        var obs = new IntersectionObserver(function(entries) {
             entries.forEach(function(en) {
                 if (en.isIntersecting) {
                     en.target.style.opacity = '1';

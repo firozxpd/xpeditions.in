@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI Capabilities — Xpeditions IT Solutions</title>
+    <title>AI Capabilities &mdash; Xpeditions IT Solutions</title>
     <meta name="description" content="Xpeditions AI: configurable custom models per customer, published models for media &amp; advertising, and an AI-based media server with text-chat and voice ad publishing.">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -32,9 +32,9 @@
 <!-- ============ PAGE HEAD ============ -->
 <section class="page-head">
     <div class="container">
-        <span class="eyebrow">AI at Xpeditions</span>
-        <h1>Artificial intelligence,<br>built for media &amp; advertising.</h1>
-        <p class="lead">
+        <div class="eyebrow">AI at Xpeditions</div>
+        <h1>Artificial intelligence,<br>built for <span class="serif-accent">media &amp; advertising.</span></h1>
+        <p class="lead" style="margin-top: 18px;">
             Three things we are doing now: configuring AI models to each customer's
             data and workflow, publishing reusable models for the media and
             advertisement industry, and building an AI media server that lets users
@@ -43,213 +43,238 @@
     </div>
 </section>
 
-<!-- ============ THREE PILLARS ============ -->
-<section class="ai-band">
+<!-- ============ THE THREE PILLARS ============ -->
+<section class="ai-section">
     <div class="container">
 
         <!-- Pillar 1 -->
         <div class="ai-feature">
-            <div>
+            <div class="ai-feature-text">
                 <div class="ai-feature-number">01.</div>
-                <span class="eyebrow">Custom configuration</span>
+                <div class="eyebrow">Custom configuration</div>
                 <h3>Custom AI models, configured to your business.</h3>
-                <p>
+                <p style="margin-top: 14px;">
                     There is no single "right" AI model for every customer. A regional newspaper, a cable
-                    operator, a billing team and a hospitality chain all speak different languages —
+                    operator, a billing team and a hospitality chain all speak different languages &mdash;
                     literally and operationally. We design model configurations around your specific
                     data, your specific terminology and your specific rules.
                 </p>
                 <ul>
                     <li>Discovery workshops to map your data sources, formats and decisions</li>
                     <li>Fine-tuning on your historical orders, invoices, scripts, recordings</li>
-                    <li>Configurable guardrails — discount limits, approval chains, escalations</li>
+                    <li>Configurable guardrails &mdash; discount limits, approval chains, escalations</li>
                     <li>Multi-language support including Malayalam, Hindi, Tamil, English</li>
-                    <li>Deploy on-prem, on cloud, or hybrid — your data, your choice</li>
+                    <li>Deploy on-prem, on cloud, or hybrid &mdash; your data, your choice</li>
                     <li>Continuous evaluation, monitoring &amp; periodic re-training</li>
                 </ul>
             </div>
-            <div class="ai-mock">
-                <div class="ai-mock-bar"><span></span><span></span><span></span></div>
-                <div class="ai-mock-line">// xp-model-config.json</div>
-                <div class="ai-mock-line"><span class="key">"client_id"</span>: <span class="val">"adworks-kerala"</span>,</div>
-                <div class="ai-mock-line"><span class="key">"domain"</span>: <span class="val">"print_advertising"</span>,</div>
-                <div class="ai-mock-line"><span class="key">"languages"</span>: [<span class="val">"en"</span>, <span class="val">"ml"</span>],</div>
-                <div class="ai-mock-line"><span class="key">"data_sources"</span>: [</div>
-                <div class="ai-mock-line">&nbsp;&nbsp;<span class="val">"adxpert.orders"</span>,</div>
-                <div class="ai-mock-line">&nbsp;&nbsp;<span class="val">"adxpert.invoices"</span>,</div>
-                <div class="ai-mock-line">&nbsp;&nbsp;<span class="val">"tally.ledgers"</span></div>
-                <div class="ai-mock-line">],</div>
-                <div class="ai-mock-line"><span class="key">"guardrails"</span>: {</div>
-                <div class="ai-mock-line">&nbsp;&nbsp;<span class="key">"max_discount"</span>: <span class="val">15</span>,</div>
-                <div class="ai-mock-line">&nbsp;&nbsp;<span class="key">"approval"</span>: <span class="val">"branch_manager"</span></div>
-                <div class="ai-mock-line">},</div>
-                <div class="ai-mock-line"><span class="key">"deployment"</span>: <span class="val">"on_prem"</span></div>
-                <div class="ai-mock-line">&nbsp;</div>
-                <div class="ai-mock-line"><span class="you">▸ ready to deploy ✓</span></div>
+            <div class="ai-feature-visual">
+                <div class="ai-mock">
+                    <div class="ai-mock-bar">
+                        <span></span><span></span><span></span>
+                        <span class="filename">xp-model-config.json</span>
+                    </div>
+                    <div class="ai-mock-line"><span class="cmt">// per-customer configuration</span></div>
+                    <div class="ai-mock-line"><span class="key">"client_id"</span>: <span class="val">"adworks-kerala"</span>,</div>
+                    <div class="ai-mock-line"><span class="key">"domain"</span>: <span class="val">"print_advertising"</span>,</div>
+                    <div class="ai-mock-line"><span class="key">"languages"</span>: [<span class="val">"en"</span>, <span class="val">"ml"</span>],</div>
+                    <div class="ai-mock-line"><span class="key">"data_sources"</span>: [</div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;<span class="val">"adxpert.orders"</span>,</div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;<span class="val">"adxpert.invoices"</span>,</div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;<span class="val">"tally.ledgers"</span></div>
+                    <div class="ai-mock-line">],</div>
+                    <div class="ai-mock-line"><span class="key">"guardrails"</span>: {</div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;<span class="key">"max_discount"</span>: <span class="val">15</span>,</div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;<span class="key">"approval"</span>: <span class="val">"branch_mgr"</span></div>
+                    <div class="ai-mock-line">},</div>
+                    <div class="ai-mock-line"><span class="key">"deployment"</span>: <span class="val">"on_prem"</span></div>
+                    <div class="ai-mock-line">&nbsp;</div>
+                    <div class="ai-mock-line"><span class="you">▸ ready to deploy ✓</span></div>
+                </div>
             </div>
         </div>
 
         <!-- Pillar 2 -->
         <div class="ai-feature reverse">
-            <div>
+            <div class="ai-feature-text">
                 <div class="ai-feature-number">02.</div>
-                <span class="eyebrow">Published models</span>
+                <div class="eyebrow">Published models</div>
                 <h3>Pre-trained models, published for media &amp; advertising.</h3>
-                <p>
+                <p style="margin-top: 14px;">
                     Over a decade of building adXpert and ctvXpert has given us a unique view into
                     how the media and advertisement industry actually works. We've packaged that
                     expertise into a growing library of pre-trained models you can plug straight
                     into your operations.
                 </p>
-                <p style="margin-top: 18px;">
-                    Each model is versioned, benchmarked, and easy to upgrade — so your team
+                <p style="margin-top: 12px;">
+                    Each model is versioned, benchmarked, and easy to upgrade &mdash; so your team
                     spends less time training AI and more time using it.
                 </p>
             </div>
-            <div>
+            <div class="ai-feature-visual">
                 <div class="ai-mock">
-                    <div class="ai-mock-bar"><span></span><span></span><span></span></div>
-                    <div class="ai-mock-line">// published models · v2026.04</div>
+                    <div class="ai-mock-bar">
+                        <span></span><span></span><span></span>
+                        <span class="filename">published models · v2026.04</span>
+                    </div>
+                    <div class="ai-mock-line"><span class="cmt">// production-ready model library</span></div>
                     <div class="ai-mock-line">&nbsp;</div>
-                    <div class="ai-mock-line">▸ <span class="val">xp-ro-extractor</span> &nbsp; <span class="key">v2.1</span></div>
-                    <div class="ai-mock-line">▸ <span class="val">xp-rate-card-match</span> <span class="key">v1.4</span></div>
-                    <div class="ai-mock-line">▸ <span class="val">xp-spot-scheduler</span> &nbsp;<span class="key">v1.2</span></div>
-                    <div class="ai-mock-line">▸ <span class="val">xp-brand-safety</span> &nbsp;&nbsp;<span class="key">v3.0</span></div>
-                    <div class="ai-mock-line">▸ <span class="val">xp-ad-classifier</span> &nbsp;<span class="key">v2.0</span></div>
-                    <div class="ai-mock-line">▸ <span class="val">xp-subtitle-gen</span> &nbsp;&nbsp;<span class="key">v1.0</span></div>
-                    <div class="ai-mock-line">▸ <span class="val">xp-invoice-ocr</span> &nbsp;&nbsp;<span class="key">v2.3</span></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Detailed model cards -->
-        <div style="margin-top: 70px;">
-            <div class="section-head">
-                <h3 style="color: white; font-size: 1.5rem;">Currently published</h3>
-            </div>
-            <div class="model-grid">
-                <div class="model-card">
-                    <div class="model-tag">Extraction</div>
-                    <h3>xp-ro-extractor</h3>
-                    <p class="small">Pulls release orders out of email bodies, PDFs and scanned attachments — auto-creating bookings in adXpert.</p>
-                    <div class="model-spec"><span>Input</span><span>PDF · Email · Image</span></div>
-                    <div class="model-spec"><span>Accuracy</span><span>~96%</span></div>
-                    <div class="model-spec"><span>Status</span><span>Production</span></div>
-                </div>
-                <div class="model-card">
-                    <div class="model-tag">Matching</div>
-                    <h3>xp-rate-card-match</h3>
-                    <p class="small">Matches incoming RO line-items against the right rate card, edition and discount slab automatically.</p>
-                    <div class="model-spec"><span>Domain</span><span>Print &amp; broadcast</span></div>
-                    <div class="model-spec"><span>Accuracy</span><span>~98%</span></div>
-                    <div class="model-spec"><span>Status</span><span>Production</span></div>
-                </div>
-                <div class="model-card">
-                    <div class="model-tag">Scheduling</div>
-                    <h3>xp-spot-scheduler</h3>
-                    <p class="small">Optimizes ad-spot placement across breaks for fill-rate, client mix and revenue.</p>
-                    <div class="model-spec"><span>Use case</span><span>TV / FM / digital</span></div>
-                    <div class="model-spec"><span>Lift</span><span>+11% fill</span></div>
-                    <div class="model-spec"><span>Status</span><span>Beta</span></div>
-                </div>
-                <div class="model-card">
-                    <div class="model-tag">Safety</div>
-                    <h3>xp-brand-safety</h3>
-                    <p class="small">Screens ad creatives and copy for brand-safety, language and regulatory red flags before they go live.</p>
-                    <div class="model-spec"><span>Coverage</span><span>Text · Image · Video</span></div>
-                    <div class="model-spec"><span>Languages</span><span>EN / ML / HI / TA</span></div>
-                    <div class="model-spec"><span>Status</span><span>Production</span></div>
-                </div>
-                <div class="model-card">
-                    <div class="model-tag">Classification</div>
-                    <h3>xp-ad-classifier</h3>
-                    <p class="small">Auto-tags incoming ads by category, sector, sub-sector — feeding downstream reports and audience analytics.</p>
-                    <div class="model-spec"><span>Taxonomy</span><span>120+ categories</span></div>
-                    <div class="model-spec"><span>Accuracy</span><span>~94%</span></div>
-                    <div class="model-spec"><span>Status</span><span>Production</span></div>
-                </div>
-                <div class="model-card">
-                    <div class="model-tag">OCR</div>
-                    <h3>xp-invoice-ocr</h3>
-                    <p class="small">Reads vendor invoices and posts the right voucher to Tally — no manual key-in for routine bills.</p>
-                    <div class="model-spec"><span>Throughput</span><span>~2 sec / invoice</span></div>
-                    <div class="model-spec"><span>Integration</span><span>Tally · erpXpert</span></div>
-                    <div class="model-spec"><span>Status</span><span>Production</span></div>
+                    <div class="ai-mock-line">▸ <span class="val">xp-ro-extractor</span> &nbsp;&nbsp;&nbsp;&nbsp;<span class="key">v2.1</span></div>
+                    <div class="ai-mock-line">▸ <span class="val">xp-rate-card-match</span>&nbsp;&nbsp;<span class="key">v1.4</span></div>
+                    <div class="ai-mock-line">▸ <span class="val">xp-spot-scheduler</span>&nbsp;&nbsp;&nbsp;<span class="key">v1.2</span></div>
+                    <div class="ai-mock-line">▸ <span class="val">xp-brand-safety</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">v3.0</span></div>
+                    <div class="ai-mock-line">▸ <span class="val">xp-ad-classifier</span>&nbsp;&nbsp;&nbsp;<span class="key">v2.0</span></div>
+                    <div class="ai-mock-line">▸ <span class="val">xp-subtitle-gen</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">v1.0</span></div>
+                    <div class="ai-mock-line">▸ <span class="val">xp-invoice-ocr</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="key">v2.3</span></div>
                 </div>
             </div>
         </div>
 
         <!-- Pillar 3 -->
-        <div class="ai-feature" style="margin-top: 90px;">
-            <div>
+        <div class="ai-feature">
+            <div class="ai-feature-text">
                 <div class="ai-feature-number">03.</div>
-                <span class="eyebrow">In the lab</span>
-                <h3>AI media server — add and publish ads by chat or voice.</h3>
-                <p>
+                <div class="eyebrow">In the lab</div>
+                <h3>AI media server &mdash; add and publish ads by chat or voice.</h3>
+                <p style="margin-top: 14px;">
                     The product we're most excited about: an AI-based media server where the
-                    user-interface is conversation itself.
-                    Users add, edit, schedule and publish advertisements using text chat or voice
-                    commands, in their own language. The system extracts the intent, drafts the
-                    release order, calls the right pricing engine and the right Tally voucher —
-                    and then waits for a single confirmation.
+                    user-interface is conversation itself. Users add, edit, schedule and publish
+                    advertisements using text chat or voice commands, in their own language.
+                </p>
+                <p style="margin-top: 12px;">
+                    The system extracts the intent, drafts the release order, calls the right
+                    pricing engine and the right Tally voucher &mdash; and then waits for a single
+                    confirmation.
                 </p>
                 <ul>
-                    <li>Natural-language ad creation — typed or spoken</li>
+                    <li>Natural-language ad creation &mdash; typed or spoken</li>
                     <li>Multi-lingual: English &amp; major Indian languages</li>
                     <li>Auto-creation of release orders, invoices and Tally entries</li>
-                    <li>Voice-driven approvals on phone / desktop / tablet</li>
+                    <li>Voice-driven approvals on phone, desktop or tablet</li>
                     <li>Real-time monitoring of plays, reach &amp; revenue</li>
-                    <li>Pluggable into adXpert and ctvXpert installations</li>
                 </ul>
             </div>
-            <div class="ai-mock">
-                <div class="ai-mock-bar"><span></span><span></span><span></span></div>
-                <div class="ai-mock-line"><span class="you">▸ you (voice):</span></div>
-                <div class="ai-mock-line">"Book a 20-second spot for Reliance Trends on the Saturday prime-time band, twice."</div>
-                <div class="ai-mock-line">&nbsp;</div>
-                <div class="voice-bars">
-                    <span></span><span></span><span></span><span></span><span></span><span></span>
-                    <span></span><span></span><span></span><span></span><span></span><span></span>
+            <div class="ai-feature-visual">
+                <div class="ai-mock">
+                    <div class="ai-mock-bar">
+                        <span></span><span></span><span></span>
+                        <span class="filename">xp.media · voice session</span>
+                    </div>
+                    <div class="ai-mock-line"><span class="you">▸ you (voice):</span></div>
+                    <div class="ai-mock-line"><span class="val">"Book a 20-second spot for Reliance</span></div>
+                    <div class="ai-mock-line"><span class="val">&nbsp;Trends on the Saturday prime-time</span></div>
+                    <div class="ai-mock-line"><span class="val">&nbsp;band, twice."</span></div>
+                    <div class="voice-bars">
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                        <span></span><span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="ai-mock-line"><span class="key">▸ xp.media:</span></div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;client: &nbsp;&nbsp;<span class="val">Reliance Trends</span></div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;duration: <span class="val">20s × 2 spots</span></div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;slot: &nbsp;&nbsp;&nbsp;&nbsp;<span class="val">Sat 20:00–22:00</span></div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;ro: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">draft #RO-2026-0418</span></div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;tally: &nbsp;&nbsp;&nbsp;<span class="val">ready to post</span></div>
+                    <div class="ai-mock-line">&nbsp;&nbsp;<span class="you">confirm? (yes / edit)</span></div>
                 </div>
-                <div class="ai-mock-line"><span class="key">▸ xp.media:</span></div>
-                <div class="ai-mock-line">&nbsp;&nbsp;client: &nbsp;&nbsp;<span class="val">Reliance Trends</span></div>
-                <div class="ai-mock-line">&nbsp;&nbsp;duration: <span class="val">20s × 2 spots</span></div>
-                <div class="ai-mock-line">&nbsp;&nbsp;slot: &nbsp;&nbsp;&nbsp;&nbsp;<span class="val">Sat 20:00–22:00</span></div>
-                <div class="ai-mock-line">&nbsp;&nbsp;rate: &nbsp;&nbsp;&nbsp;&nbsp;<span class="val">₹ as per card</span></div>
-                <div class="ai-mock-line">&nbsp;&nbsp;ro: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="val">draft #RO-2026-0418</span></div>
-                <div class="ai-mock-line">&nbsp;&nbsp;tally: &nbsp;&nbsp;&nbsp;<span class="val">ready to post</span></div>
-                <div class="ai-mock-line">&nbsp;&nbsp;<span class="you">confirm? (yes / edit)</span></div>
             </div>
         </div>
 
     </div>
 </section>
 
-<!-- ============ HOW WE WORK ============ -->
-<section>
+<!-- ============ MODEL LIBRARY ============ -->
+<section class="bg-white">
     <div class="container">
         <div class="section-head">
-            <span class="eyebrow">How we work</span>
+            <div class="eyebrow">Model library</div>
+            <h2>Currently published.</h2>
+            <p class="lead" style="margin: 16px auto 0;">A growing catalogue of pre-trained, production-ready models &mdash; each one battle-tested on real customer data.</p>
+        </div>
+
+        <div class="model-grid" style="margin-top: 0;">
+            <div class="model-card">
+                <div class="model-tag">Extraction</div>
+                <h3>xp-ro-extractor</h3>
+                <div class="model-code">v2.1 · production</div>
+                <p class="small">Pulls release orders out of email bodies, PDFs and scanned attachments &mdash; auto-creating bookings in adXpert.</p>
+                <div class="model-spec"><span>Input</span><span>PDF · Email · Image</span></div>
+                <div class="model-spec"><span>Accuracy</span><span>~96%</span></div>
+                <div class="model-spec"><span>Languages</span><span>EN / ML</span></div>
+            </div>
+            <div class="model-card">
+                <div class="model-tag">Matching</div>
+                <h3>xp-rate-card-match</h3>
+                <div class="model-code">v1.4 · production</div>
+                <p class="small">Matches incoming RO line-items against the right rate card, edition and discount slab automatically.</p>
+                <div class="model-spec"><span>Domain</span><span>Print &amp; broadcast</span></div>
+                <div class="model-spec"><span>Accuracy</span><span>~98%</span></div>
+                <div class="model-spec"><span>Latency</span><span>&lt; 200 ms</span></div>
+            </div>
+            <div class="model-card">
+                <div class="model-tag">Scheduling</div>
+                <h3>xp-spot-scheduler</h3>
+                <div class="model-code">v1.2 · beta</div>
+                <p class="small">Optimizes ad-spot placement across breaks for fill-rate, client mix and revenue.</p>
+                <div class="model-spec"><span>Use case</span><span>TV / FM / digital</span></div>
+                <div class="model-spec"><span>Lift</span><span>+11% fill</span></div>
+                <div class="model-spec"><span>Mode</span><span>Batch · realtime</span></div>
+            </div>
+            <div class="model-card">
+                <div class="model-tag">Safety</div>
+                <h3>xp-brand-safety</h3>
+                <div class="model-code">v3.0 · production</div>
+                <p class="small">Screens ad creatives and copy for brand-safety, language and regulatory red flags before they go live.</p>
+                <div class="model-spec"><span>Coverage</span><span>Text · Image · Video</span></div>
+                <div class="model-spec"><span>Languages</span><span>EN / ML / HI / TA</span></div>
+                <div class="model-spec"><span>Latency</span><span>&lt; 500 ms</span></div>
+            </div>
+            <div class="model-card">
+                <div class="model-tag">Classification</div>
+                <h3>xp-ad-classifier</h3>
+                <div class="model-code">v2.0 · production</div>
+                <p class="small">Auto-tags incoming ads by category, sector and sub-sector &mdash; feeding downstream reports and audience analytics.</p>
+                <div class="model-spec"><span>Taxonomy</span><span>120+ categories</span></div>
+                <div class="model-spec"><span>Accuracy</span><span>~94%</span></div>
+                <div class="model-spec"><span>Throughput</span><span>~1k/sec</span></div>
+            </div>
+            <div class="model-card">
+                <div class="model-tag">OCR</div>
+                <h3>xp-invoice-ocr</h3>
+                <div class="model-code">v2.3 · production</div>
+                <p class="small">Reads vendor invoices and posts the right voucher to Tally &mdash; no manual key-in for routine bills.</p>
+                <div class="model-spec"><span>Throughput</span><span>~2 sec / invoice</span></div>
+                <div class="model-spec"><span>Integration</span><span>Tally · erpXpert</span></div>
+                <div class="model-spec"><span>Accuracy</span><span>~97%</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ HOW WE WORK ============ -->
+<section class="bg-tint">
+    <div class="container">
+        <div class="section-head">
+            <div class="eyebrow">How we work</div>
             <h2>From idea to live model in four steps.</h2>
         </div>
         <div class="cap-grid">
             <div class="cap-card">
-                <div class="num">Step 01</div>
+                <div class="cap-icon">01</div>
                 <h3>Discover</h3>
-                <p>We sit with your team, map your workflows, and identify where AI will actually move the needle — and where it won't.</p>
+                <p>We sit with your team, map your workflows, and identify where AI will actually move the needle &mdash; and where it won't.</p>
             </div>
             <div class="cap-card">
-                <div class="num">Step 02</div>
+                <div class="cap-icon">02</div>
                 <h3>Configure</h3>
                 <p>We choose the right base model (one of ours, or open-source) and configure it on your data, your vocabulary, your rules.</p>
             </div>
             <div class="cap-card">
-                <div class="num">Step 03</div>
+                <div class="cap-icon">03</div>
                 <h3>Deploy</h3>
-                <p>On-prem, on cloud or hybrid — your call. We integrate with adXpert, ctvXpert, erpXpert, Tally or whatever else you run.</p>
+                <p>On-prem, on cloud or hybrid &mdash; your call. We integrate with adXpert, ctvXpert, erpXpert, Tally or whatever else you run.</p>
             </div>
             <div class="cap-card">
-                <div class="num">Step 04</div>
+                <div class="cap-icon">04</div>
                 <h3>Improve</h3>
                 <p>Models drift. We monitor accuracy, capture corrections from real users, and ship better versions on a steady cadence.</p>
             </div>
@@ -260,22 +285,21 @@
 <!-- ============ CTA ============ -->
 <section class="cta-band">
     <div class="container">
-        <span class="eyebrow">Build with us</span>
+        <div class="eyebrow" style="justify-content: center;">Build with us</div>
         <h2>Have an AI idea for your business?</h2>
-        <p>Tell us what's slowing your team down. We'll tell you honestly whether AI can help — and if it can, we'll build it.</p>
+        <p>Tell us what's slowing your team down. We'll tell you honestly whether AI can help &mdash; and if it can, we'll build it.</p>
         <a href="contact.html" class="btn btn-primary btn-arrow">Talk to our team</a>
     </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
 <footer class="site-footer">
     <div class="container">
         <div class="footer-grid">
             <div class="footer-brand">
-                <img src="assets/images/logo.png" alt="Xpeditions">
+                <div class="footer-logo"><img src="assets/images/logo.png" alt="Xpeditions"></div>
                 <p>Xpeditions IT Solutions Pvt Ltd.<br>
                 Second floor, A.R. Plaza, P.M.G,<br>
-                Trivandrum — 695033, Kerala, India</p>
+                Trivandrum &mdash; 695033, Kerala, India</p>
                 <div class="footer-social">
                     <a href="https://www.facebook.com/thexpeditions" target="_blank" rel="noopener" aria-label="Facebook">f</a>
                     <a href="https://twitter.com/xpeditions3" target="_blank" rel="noopener" aria-label="Twitter">t</a>
