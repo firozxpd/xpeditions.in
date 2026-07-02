@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VBrick Player (SDK)</title>
+
+  <style>
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background: black;
+      overflow: hidden;
+    }
+
+    #embed {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="embed"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@vbrick/rev-sdk@latest/dist/rev-sdk.js"></script>
+
+  <script>
+    const videoId = "78fb9388-6ac5-436b-8e40-643c0dd712ac";
+
+    async function loadPlayer() {
+      try {
+
+        const response = await fetch(
+          "https://integrations-dev.spectrio.com/vbrick/token",
+          {
+            method: "POST",
+            headers: {
+              "ENGAGE-V3-INTEGRATION-HUB-API-KEY": "akhil"
+            }
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error(`Token request failed: ${response.status}`);
+        }
+
+        const { accessToken, expiration } = await response.json();
+
+        console.log("Access Token:", accessToken);
+        console.log("Expires:", expiration);
+
+        const vbrickEmbed = revSdk.embedVideo("#embed", videoId, {
+          baseUrl: "https://spectrio-dev.rev-na.demo.vbrick.com",
+          autoplay: true,
+          log: true,
+          token: {
+            type: revSdk.TokenType.ACCESS_TOKEN,
+            value: accessToken,
+            issuer: "VBrick"
+          }
+        });
+
+        vbrickEmbed.on("videoLoaded", function (data) {
+          console.log("Video loaded:", data);
+        });
+
+        vbrickEmbed.on("playerStatusChanged", function (status) {
+          console.log("Player status:", status);
+        });
+
+        vbrickEmbed.on("error", function (err) {
+          console.error("VBrick embed error:", err);
+        });
+
+      } catch (err) {
+        console.error("Failed to initialize player:", err);
+      }
+    }
+
+    loadPlayer();
+  </script>
+</body>
+</html>
